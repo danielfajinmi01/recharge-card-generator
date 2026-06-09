@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./recharge.js"></script>
+    <title>Recharge</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+<div class="main">
+        <section class="pingen">
+        <div>
+            <label><h3>Network</h3></label>
+            <select name="Select a network provider" id="airtel">
+                <option id="networkOp" value="" selected disabled>Select a network provider</option>
+                <option value="airtel">Airtel</option>
+                <option value="mtn">MTN</option>
+                <option value="glo">GLO</option>
+            </select>
+        </div>
+        <div>
+            <label> <h3>Amount</h3> </label>
+            <input id="amount" type="number" placeholder="Input the amount you want to recharge">
+        </div>
+
+        <aside><label> <h3>Generated Pin</h3> </label>
+            <div class="display" id="display"></div>
+        </aside>
+
+        <figure>
+        <button class="gen btn" onclick="generate()">Generate Pin</button>
+        <button class="save btn" onclick="savePin()">Save Pin</button>
+    </figure>
+
+    </section>
+
+    <aside class="pinrecharge">
+        <label><h3 style="color: white;">Recharge pin</h3></label>
+        <input type="text" id="rechargePin" placeholder="Enter saved pin">
+        <button class="btn recharge-btn" onclick="rechargeCard()">Recharge Now</button>
+    </aside>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>SN</th>
+            <th>Network</th>
+            <th>Amount</th>
+            <th>Ref Code</th>
+            <th>Status</th>
+            <th>Date Created</th>
+            <th>Date Used</th>
+            <th>Action</th>
+            <th>Action Button</th>
+        </tr>
+    </thead>
+    <tbody id="pinTableBody"></tbody>
+</table>
+
+
+</body>
+
+</html>

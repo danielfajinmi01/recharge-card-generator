@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Key</title>
+</head>
+<body>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    
+<input id="key" type="text" placeholder="Enter a key">
+<input id="inpv" type="text" placeholder="Enter a value">
+<button onclick="myFunc()">Click</button>
+
+<script>
+    
+    let users = { }
+    function myFunc() {
+        let inputValue = document.getElementById("inpv").value;
+        let key = document.getElementById("key").value;  
+       users[key] = inputValue;
+    }
+     console.log(users);
+    
+    
+</script>
+    
+</body>
+</html>
